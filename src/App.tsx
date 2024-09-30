@@ -5,6 +5,7 @@ import {Navigate, NavLink, Route, Routes} from 'react-router-dom';
 import {Error404} from './components/pages/Error404';
 import {S} from './components/pages/_styles'
 import {Model} from './components/pages/Model';
+import {Abibas} from './components/pages/Abibas';
 
 const PATH = {
     PAGE1: 'adidas',
@@ -35,8 +36,8 @@ function App() {
                     <Routes>
                         <Route path={'/'} element={<Navigate to={PATH.PAGE1}/>}/>
                         <Route path={PATH.PAGE1} element={<Adidas/>}></Route>
-                        <Route path={PATH.PAGE1} element={<Adidas/>}></Route>
                         <Route path={PATH.PAGE2} element={<Puma/>}></Route>
+                        <Route path={PATH.PAGE3} element={<Abibas/>}></Route>
                         <Route path={'adidas/:id'} element={<Model/>}></Route>
                         <Route path={PATH.PAGE_ERROR} element={<Error404/>}></Route>
                         <Route path="/*" element={<Navigate to={PATH.PAGE_ERROR}/>}/>
